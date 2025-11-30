@@ -1,0 +1,73 @@
+1. How to Use It (High-Level)
+
+
+Network
+
+
+Compile & deploy on BNB Smart Chain:
+
+
+Testnet: BSC Testnet (Chapel)
+
+
+Mainnet: BNB Smart Chain Mainnet
+
+
+
+
+
+
+Deploy (easiest via Remix):
+
+
+Go to Remix → new file → paste code.
+
+
+Compiler: Solidity 0.8.20 (or compatible).
+
+
+Deploy using MetaMask on BSC (testnet or mainnet).
+
+
+
+
+Accept Payments in Your DApp / Website
+
+
+Frontend calls pay(string reference) with:
+
+
+value: amount in BNB (in wei).
+
+
+reference: order ID, user ID, etc.
+
+
+
+
+You can also just show the contract address as a payment address; any BNB sent directly will still be logged via receive().
+
+
+
+
+Withdraw Funds
+
+
+As owner, call:
+
+
+withdraw(amount) or
+
+
+withdrawAll() to move BNB to your wallet.
+
+
+
+
+
+
+
+2. Variant: Token (BEP-20) Payments (Optional)
+If you also want token payments (USDT, custom token, etc.), you’d add an IERC20 interface and a payWithToken() function that calls transferFrom. I can write that version too if you tell me:
+
+
